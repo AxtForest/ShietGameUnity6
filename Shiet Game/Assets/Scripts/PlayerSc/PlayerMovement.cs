@@ -1,81 +1,98 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Lean.Touch;
 
-public class PlayerMovement : MonoBehaviour
+public class SimpleRunnerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private float forwardSpeed = 8f;
+    [SerializeField]
+    private float horizontalSpeed = 0.01f;
+    [Space]
+    [SerializeField]
+    private float maxHorizontalMovement = 2f;
+    [Space]
+    [SerializeField]
+    private float horizontalSmooth = 20f;
+    [SerializeField]
+    private float rotateSmooth = 15f;
+    [Space]
+    [SerializeField]
+    private float maxRotateAngle = 15f;
+    [SerializeField]
+    private float rotationPower = 40f;
 
-  
-    [SerializeField] float horizontalSpeed = 0.01f;
-    [SerializeField] float minX = -2f;
-    [SerializeField] float maxX = 2f;
+    private bool started;
+    private bool dragging;
 
+    private float targetX;
+    private float currentRotate;
+    private Quaternion baseRot;
 
-    [SerializeField] float maxRotateAngle = 15f;
-    [SerializeField] float rotateSmooth = 10f;
+    private Animator animator;
 
-    [SerializeField] float smoothSpeed = 10f;
-
-    float currentRotate = 0f;
-
-    float deltaPosX;
-
-
-
-
-    private void Start()
+    void Start()
     {
-        Application.targetFrameRate = 60;
+        baseRot = transform.rotation;
+        animator = GetComponent<Animator>();
+        targetX = transform.position.x;
     }
+
+    void OnEnable()
+    {
+        LeanTouch.OnFingerDown += OnFingerDown;
+        LeanTouch.OnFingerUp += OnFingerUp;
+        LeanTouch.OnFingerUpdate += OnFingerUpdate;
+    }
+
+    void OnDisable()
+    {
+        LeanTouch.OnFingerDown -= OnFingerDown;
+        LeanTouch.OnFingerUp -= OnFingerUp;
+        LeanTouch.OnFingerUpdate -= OnFingerUpdate;
+    }
+
     void Update()
     {
-        HandleTouch();
+        if (!started) return;
 
-       
-    }
+        Vector3 pos = transform.position;
 
-    void HandleTouch()
-    {
-        if (Input.touchCount == 0)
-        {
-            
-            currentRotate = Mathf.Lerp(currentRotate, 0f, Time.deltaTime * rotateSmooth);
-            transform.rotation = Quaternion.Euler(0, currentRotate, 0);
-            return;
-        }
+        float oldX = pos.x;
+        float newX = Mathf.Lerp(oldX, targetX, Time.deltaTime * horizontalSmooth);
 
-        Touch touch = Input.GetTouch(0);
-         deltaPosX = touch.deltaPosition.x;
+        pos.x = newX;
+        pos.z += forwardSpeed * Time.deltaTime;
+        transform.position = pos;
 
-        if (touch.phase == TouchPhase.Moved)
-        {
-            
-            MovePlayer();
-            RotatePlayer();
-        }
-       
-        
-    }
-    void MovePlayer()
-    {
-        Vector3 targetPos = transform.position;
+        float xDifference = newX - oldX;
+        float targetRotate = Mathf.Clamp(xDifference * rotationPower, -maxRotateAngle, maxRotateAngle);
+        if (!dragging) targetRotate = 0f;
 
-        float clampX = Mathf.Clamp(targetPos.x+deltaPosX, minX, maxX);
-        targetPos.x = clampX;
-        transform.position = Vector3.Lerp(transform.position,targetPos,Time.deltaTime * smoothSpeed);
-
-
-    }
-    void RotatePlayer()
-    {
-
-        float targetRotate = Mathf.Clamp(deltaPosX, -1f, 1f) * maxRotateAngle;
         currentRotate = Mathf.Lerp(currentRotate, targetRotate, Time.deltaTime * rotateSmooth);
-        transform.rotation = Quaternion.Euler(0, currentRotate, 0);
+        transform.rotation = baseRot * Quaternion.Euler(0f, currentRotate, 0f);
     }
 
+
+    void OnFingerDown(LeanFinger finger)
+    {
+        if (!started)
+        {
+            animator.CrossFade("Run", 0f, 0);
+            started = true;
+        }
+
+        dragging = true;
+        targetX = transform.position.x;
+    }
+
+    void OnFingerUp(LeanFinger finger)
+    {
+        dragging = false;
+    }
+
+    void OnFingerUpdate(LeanFinger finger)
+    {
+        if (!dragging) return;
+        targetX = Mathf.Clamp(targetX + finger.ScaledDelta.x * horizontalSpeed / 100f, -maxHorizontalMovement, maxHorizontalMovement);
+    }
 }
-
-
-
-
