@@ -17,11 +17,13 @@ public class Obstacle : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        PlayerScale player = other.GetComponent<PlayerScale>();
-        if (player != null)
+        PlayerConvert manager = FindObjectOfType<PlayerConvert>();
+
+        if (manager != null)
         {
-            player.SubScale(1);
-            //Destroy(gameObject); destroy degil partikul effect cikcak 
+            manager.SubFood(1);
+            //Destroy(gameObject);
         }
     }
 }
+

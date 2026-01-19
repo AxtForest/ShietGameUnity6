@@ -1,6 +1,6 @@
 using UnityEngine;
 using Lean.Touch;
-
+using Dreamteck.Splines;
 public class SimpleRunnerMovement : MonoBehaviour
 {
     [SerializeField]
@@ -30,11 +30,17 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     private Animator animator;
 
+
+    [SerializeField] SplineFollower splineFollower;
+
+
+
     void Start()
     {
         baseRot = transform.rotation;
         animator = GetComponent<Animator>();
         targetX = transform.position.x;
+        
     }
 
     void OnEnable()
@@ -42,6 +48,7 @@ public class SimpleRunnerMovement : MonoBehaviour
         LeanTouch.OnFingerDown += OnFingerDown;
         LeanTouch.OnFingerUp += OnFingerUp;
         LeanTouch.OnFingerUpdate += OnFingerUpdate;
+        
     }
 
     void OnDisable()
@@ -61,7 +68,7 @@ public class SimpleRunnerMovement : MonoBehaviour
         float newX = Mathf.Lerp(oldX, targetX, Time.deltaTime * horizontalSmooth);
 
         pos.x = newX;
-        pos.z += forwardSpeed * Time.deltaTime;
+        //pos.z += forwardSpeed * Time.deltaTime;
         transform.position = pos;
 
         float xDifference = newX - oldX;
@@ -79,6 +86,8 @@ public class SimpleRunnerMovement : MonoBehaviour
         {
             animator.CrossFade("Run", 0f, 0);
             started = true;
+            splineFollower.follow = true;
+
         }
 
         dragging = true;

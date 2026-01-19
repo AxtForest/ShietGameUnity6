@@ -17,10 +17,11 @@ public class Food : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        PlayerScale player = other.GetComponent<PlayerScale>();
-        if (player != null)
+        PlayerConvert manager = FindObjectOfType<PlayerConvert>();
+
+        if (manager != null)
         {
-            player.AddScale(1);
+            manager.AddFood(1);
             Destroy(gameObject);
         }
     }
