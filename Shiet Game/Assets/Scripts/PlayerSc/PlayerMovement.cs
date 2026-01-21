@@ -3,8 +3,8 @@ using Lean.Touch;
 using Dreamteck.Splines;
 public class SimpleRunnerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float forwardSpeed = 8f;
+    //[SerializeField]
+    //private float forwardSpeed = 8f;
     [SerializeField]
     private float horizontalSpeed = 0.01f;
     [Space]
@@ -33,18 +33,21 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     [SerializeField] SplineFollower splineFollower;
 
-
+    public float CurrentX { get; private set; }
 
     void Start()
     {
         baseRot = transform.rotation;
-        animator = GetComponent<Animator>();
-        targetX = transform.position.x;
-        
+        //animator = GetComponent<Animator>();
+
+        animator = GetComponentInChildren<Animator>();
+        //targetX = transform.position.x;
+
     }
 
     void OnEnable()
     {
+        //Ekrana dokunulunca bu fonksiyonu çalıştırmaya yetkilisin demekmiş
         LeanTouch.OnFingerDown += OnFingerDown;
         LeanTouch.OnFingerUp += OnFingerUp;
         LeanTouch.OnFingerUpdate += OnFingerUpdate;
@@ -53,6 +56,7 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     void OnDisable()
     {
+     
         LeanTouch.OnFingerDown -= OnFingerDown;
         LeanTouch.OnFingerUp -= OnFingerUp;
         LeanTouch.OnFingerUpdate -= OnFingerUpdate;
@@ -66,6 +70,8 @@ public class SimpleRunnerMovement : MonoBehaviour
 
         float oldX = pos.x;
         float newX = Mathf.Lerp(oldX, targetX, Time.deltaTime * horizontalSmooth);
+
+        //CurrentX = newX;
 
         pos.x = newX;
         //pos.z += forwardSpeed * Time.deltaTime;
@@ -85,6 +91,7 @@ public class SimpleRunnerMovement : MonoBehaviour
         if (!started)
         {
             animator.CrossFade("Run", 0f, 0);
+
             started = true;
             splineFollower.follow = true;
 
@@ -97,6 +104,7 @@ public class SimpleRunnerMovement : MonoBehaviour
     void OnFingerUp(LeanFinger finger)
     {
         dragging = false;
+
     }
 
     void OnFingerUpdate(LeanFinger finger)

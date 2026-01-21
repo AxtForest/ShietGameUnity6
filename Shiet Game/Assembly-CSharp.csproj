@@ -62,10 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerSc\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\ForwardMove.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\PlayerConvert.cs" />
-    <Compile Include="Assets\Scripts\PlayerSc\PlayerScale.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,63 +4,61 @@ using UnityEngine;
 
 public class PlayerConvert : MonoBehaviour
 {
+    
     [Header("Stages")]
     [SerializeField] private GameObject[] players;
     [SerializeField] private int foodPerStage = 2;
 
-    private int foodCount;
-    private int currentStage;
-    private int previousStage = -1;
-
-
-
-    
+    private int foodCounter;
+    private int currentPlayer;
+    private float lastX;
 
     private void Start()
     {
-        UpdateStage();
-        
+        SetPlayer(0);
     }
 
     public void AddFood(int amount)
     {
-        foodCount += amount;
-        TryChangeStage(+1);
+        foodCounter += amount;
+
+        if (foodCounter >= foodPerStage)
+        {
+            foodCounter = 0;
+            SetPlayer(currentPlayer + 1);
+        }
     }
 
     public void SubFood(int amount)
     {
-        foodCount -= amount;
-        TryChangeStage(-1);
+        foodCounter -= amount;
+
+        if (foodCounter <= -foodPerStage)
+        {
+            foodCounter = 0;
+            SetPlayer(currentPlayer - 1);
+        }
     }
 
-    private void TryChangeStage(int direction)
+    private void SetPlayer(int targetPlayer)
     {
-        int targetStage = foodCount / foodPerStage;
-        targetStage = Mathf.Clamp(targetStage, 0, players.Length - 1);
 
-        if (targetStage == currentStage) return;
+        targetPlayer = Mathf.Clamp(targetPlayer, 0, players.Length -1);
+        if (targetPlayer == currentPlayer) return;
 
-        currentStage = targetStage;
-        UpdateStage();
-    }
 
-    private void UpdateStage()
-    {
-        float savedX = 0f;
+        // aktif karakterin X'ini kaydet burada bir problem var geçişte alamıyorum updatede sürekli mi alsam ?
+        //SimpleRunnerMovement currX = gameObject.GetComponent<SimpleRunnerMovement>();
+        //lastX = currX.CurrentX; olmadı
 
-        if (previousStage >= 0)
-            savedX = players[previousStage].transform.localPosition.x;
+        lastX = players[currentPlayer].transform.localPosition.x;
+        currentPlayer = targetPlayer;
 
         for (int i = 0; i < players.Length; i++)
-            players[i].SetActive(i == currentStage);
+            players[i].SetActive(i == currentPlayer);
 
-        Transform activePlayer = players[currentStage].transform;
-        Vector3 pos = activePlayer.localPosition;
-        pos.x = savedX;
-        activePlayer.localPosition = pos;
-
-
-        previousStage = currentStage;
+        
+        Transform activePlaver = players[currentPlayer].transform;
+        activePlaver.localPosition = new Vector3(lastX, activePlaver.localPosition.y, activePlaver.localPosition.z);
     }
 }
