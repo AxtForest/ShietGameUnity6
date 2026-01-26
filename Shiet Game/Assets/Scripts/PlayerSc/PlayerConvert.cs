@@ -1,5 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using DG.Tweening;
+
 
 
 public class PlayerConvert : MonoBehaviour
@@ -17,9 +19,15 @@ public class PlayerConvert : MonoBehaviour
 
     [SerializeField] ParticleSystem obtacleEffect;
 
+    [SerializeField] GameObject popTarget;
+    Vector3 baseScale;
+    [SerializeField] float popScale = 0.7f;
+    [SerializeField] float popTime = 0.12f;
 
     private void Start()
     {
+
+        baseScale = popTarget.transform.localScale;
         SetPlayer(0);
         
     }
@@ -27,7 +35,7 @@ public class PlayerConvert : MonoBehaviour
     public void AddFood(int amount)
     {
         foodCounter += amount;
-        
+        PlayPop();
         if (foodCounter >= foodPerStage)
         {
             foodCounter = 0;
@@ -63,9 +71,18 @@ public class PlayerConvert : MonoBehaviour
             players[i].SetActive(i == currentPlayer);
         transformFX.Play();
 
-        Transform activePlaver = players[currentPlayer].transform;
-        activePlaver.localPosition = new Vector3(lastX, activePlaver.localPosition.y, activePlaver.localPosition.z);
+        //Transform activePlaver = players[currentPlayer].transform;
+        //activePlaver.localPosition = new Vector3(lastX, activePlaver.localPosition.y, activePlaver.localPosition.z);
     }
 
-    
+    public void PlayPop()
+    {
+        popTarget.transform.DOKill();
+        popTarget.transform.DOScale(popScale, popTime).SetEase(Ease.OutSine).OnComplete(() =>
+            {
+                popTarget.transform.DOScale(baseScale, popTime).SetEase(Ease.InSine);
+            });
+    }
+
+
 }
