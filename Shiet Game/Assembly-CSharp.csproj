@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\PlayerSc\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\PlayerConvert.cs" />
+    <Compile Include="Assets\Scripts\GameSc\JumpPad.cs" />
+    <Compile Include="Assets\Scripts\GameSc\FinishLineSc.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />
   </ItemGroup>
   <ItemGroup>

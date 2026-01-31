@@ -3,8 +3,7 @@ using Lean.Touch;
 using Dreamteck.Splines;
 public class SimpleRunnerMovement : MonoBehaviour
 {
-    //[SerializeField]
-    //private float forwardSpeed = 8f;
+   
     [SerializeField]
     private float horizontalSpeed = 0.01f;
     [Space]
@@ -33,7 +32,7 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     [SerializeField] SplineFollower splineFollower;
 
-    public float CurrentX { get; private set; }
+    
 
     void Start()
     {
@@ -111,5 +110,11 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         if (!dragging) return;
         targetX = Mathf.Clamp(targetX + finger.ScaledDelta.x * horizontalSpeed / 100f, -maxHorizontalMovement, maxHorizontalMovement);
+    }
+
+    public void StopHorizontalControl()
+    {
+        dragging = false;
+        enabled = false; // Update + LeanTouch kapat
     }
 }
