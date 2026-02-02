@@ -3,6 +3,10 @@ using UnityEngine;
 public class FinishLineSc : MonoBehaviour
 {
     [SerializeField] ParticleSystem finishParticle;
+
+
+   
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return; //TAGDEN KURTUL TO DO
@@ -15,6 +19,9 @@ public class FinishLineSc : MonoBehaviour
         {
            
             movement.StopHorizontalControl();
+            movement.AlignToCenter();
         }
+
+        
     }
 }

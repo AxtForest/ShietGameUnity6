@@ -42,6 +42,8 @@ public class SimpleRunnerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         //targetX = transform.position.x;
 
+        animator.CrossFade("Idle", 0f, 0);
+
     }
 
     void OnEnable()
@@ -115,6 +117,10 @@ public class SimpleRunnerMovement : MonoBehaviour
     public void StopHorizontalControl()
     {
         dragging = false;
-        enabled = false; // Update + LeanTouch kapat
+       
+    }
+    public void AlignToCenter()
+    {
+        targetX = 0f;
     }
 }

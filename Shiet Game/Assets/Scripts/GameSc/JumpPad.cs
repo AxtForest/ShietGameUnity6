@@ -21,7 +21,7 @@ public class JumpPad : MonoBehaviour
 
         var follower = other.GetComponentInParent<SplineFollower>();
         var rb = other.GetComponent<Rigidbody>();
-        //var anim = other.GetComponentInChildren<Animator>();
+        var anim = other.GetComponentInChildren<Animator>();
 
         follower.follow = false;
 
@@ -30,6 +30,9 @@ public class JumpPad : MonoBehaviour
 
         Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized;
         rb.AddForce(jumpDir * jumpForce, ForceMode.Impulse);
+
+
+        anim.CrossFade("Idle", 0f, 0);
 
         //anim?.CrossFade("Jump", 0f, 0);
         //jumpFX?.Play();
