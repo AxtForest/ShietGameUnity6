@@ -778,7 +778,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5145835385836869333, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
   m_PrefabInstance: {fileID: 610399297}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &617705586
+--- !u!43 &627739046
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 954205431}
   m_Layer: 0
   m_Name: Spline
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2344,7 +2344,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954205428}
-  m_Mesh: {fileID: 617705586}
+  m_Mesh: {fileID: 627739046}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2464,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -2831,7 +2831,7 @@ GameObject:
   - component: {fileID: 1267887350}
   - component: {fileID: 1267887351}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: RunCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2865,8 +2865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 2
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -3303,6 +3303,113 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5145835385836869333, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
   m_PrefabInstance: {fileID: 1548567245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1647521680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647521683}
+  - component: {fileID: 1647521682}
+  - component: {fileID: 1647521681}
+  m_Layer: 0
+  m_Name: FinishCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1647521681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647521680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraDistance: 9
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0, y: 0.24}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 7, z: -9}
+  Damping: {x: 1, y: 1, z: 1}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
+--- !u!114 &1647521682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647521680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 1
+    m_Value: 1
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 543450652668845675}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &1647521683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647521680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 11.655708, z: -12.441898}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!1 &1658350359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,7 +3534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9f5b0daac291a43863972d196f162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 12
+  jumpForce: 10
 --- !u!1001 &1678797226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3958,7 +4065,7 @@ GameObject:
   - component: {fileID: 2014990136}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4863,6 +4970,7 @@ GameObject:
   - component: {fileID: 5866666020977640466}
   - component: {fileID: 5866666020977640467}
   - component: {fileID: 5866666020977640468}
+  - component: {fileID: 5866666020977640469}
   m_Layer: 0
   m_Name: Char
   m_TagString: Player
@@ -6682,6 +6790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishParticle: {fileID: 597881265}
+  runCam: {fileID: 1267887350}
+  finishCam: {fileID: 1647521682}
 --- !u!137 &3484442680942495167
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -8015,7 +8125,24 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &5866666020977640469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149019804881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfd25e0c63588488674c01a0b952a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5866666020977640468}
+  playerConvert: {fileID: 558801026}
+  boostCooldown: 0.5
+  upForce: 1.5
+  foodCost: 2
 --- !u!4 &5901452234801204456
 Transform:
   m_ObjectHideFlags: 0
@@ -9702,6 +9829,7 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 963194228}
   - {fileID: 1267887349}
+  - {fileID: 1647521683}
   - {fileID: 954205430}
   - {fileID: 1007888357}
   - {fileID: 930460385}

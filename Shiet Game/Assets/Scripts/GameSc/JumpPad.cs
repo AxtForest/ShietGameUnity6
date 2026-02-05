@@ -3,7 +3,10 @@ using Dreamteck.Splines;
 
 public class JumpPad : MonoBehaviour
 {
-    [SerializeField] private float jumpForce = 12f;
+    [SerializeField] private float jumpForce = 5f;
+    
+
+   
     void Start()
     {
         
@@ -23,19 +26,34 @@ public class JumpPad : MonoBehaviour
         var rb = other.GetComponent<Rigidbody>();
         var anim = other.GetComponentInChildren<Animator>();
 
+        var air = other.GetComponent<AirMovement>();
+        if (air != null)
+            air.StartAirMovement();
+
+
+
         follower.follow = false;
-
-        rb.linearVelocity = Vector3.zero;
         rb.useGravity = true;
+        rb.linearVelocity = Vector3.zero;
 
-        Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized;
+
+        
+
+        Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized; 
         rb.AddForce(jumpDir * jumpForce, ForceMode.Impulse);
 
 
-        anim.CrossFade("Idle", 0f, 0);
+        anim.CrossFade("Idle", 0f, 0); //jump animle değişcek
 
-        //anim?.CrossFade("Jump", 0f, 0);
-        //jumpFX?.Play();
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (!collision.collider.CompareTag("Ground")) return;
+
+            var air = GetComponent<AirMovement>();
+            if (air != null)
+                air.StopAirMovement();
+        }
 
     }
 }

@@ -24,6 +24,8 @@ public class PlayerConvert : MonoBehaviour
     [SerializeField] float popScale = 0.7f;
     [SerializeField] float popTime = 0.12f;
 
+    public int totalFood { get; private set; }
+
     private void Start()
     {
 
@@ -35,6 +37,7 @@ public class PlayerConvert : MonoBehaviour
     public void AddFood(int amount)
     {
         foodCounter += amount;
+        totalFood++;
         PlayPop();
         if (foodCounter >= foodPerStage)
         {
@@ -47,6 +50,7 @@ public class PlayerConvert : MonoBehaviour
     public void SubFood(int amount)
     {
         foodCounter -= amount;
+        totalFood--;
         obtacleEffect.Play();
         if (foodCounter <= -foodPerStage)
         {
@@ -83,6 +87,8 @@ public class PlayerConvert : MonoBehaviour
                 popTarget.transform.DOScale(baseScale, popTime).SetEase(Ease.InSine);
             });
     }
-
-
+    public void Consume(int amount)
+    {
+        totalFood = Mathf.Max(0, totalFood - amount);
+    }
 }
