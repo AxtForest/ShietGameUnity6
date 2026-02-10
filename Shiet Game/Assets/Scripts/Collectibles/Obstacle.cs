@@ -22,6 +22,7 @@ public class Obstacle : MonoBehaviour
         if (manager != null)
         {
             manager.SubFood(1);
+            CoinManager.Instance.Remove(1);
             //Destroy(gameObject);
         }
     }

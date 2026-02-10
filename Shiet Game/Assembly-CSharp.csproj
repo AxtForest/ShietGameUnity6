@@ -62,11 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerSc\PlayerMovement.cs" />
+    <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\Close.cs" />
+    <Compile Include="Assets\Scripts\GameSc\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\PlayerConvert.cs" />
+    <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\StoreScript.cs" />
     <Compile Include="Assets\Scripts\GameSc\JumpPad.cs" />
-    <Compile Include="Assets\Scripts\GameSc\AirMovement.cs" />
+    <Compile Include="Assets\Scripts\GameSc\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameSc\FinishLineSc.cs" />
+    <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\MainControls.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />
   </ItemGroup>
   <ItemGroup>

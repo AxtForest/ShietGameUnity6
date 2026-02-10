@@ -10,7 +10,7 @@ public class FinishLineSc : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player")) return; //TAGDEN KURTUL TO DO
+        //if (!other.CompareTag("Player")) return; //TAGDEN KURTUL TO DO
         finishParticle.Play();
 
         runCam.Priority = 0;

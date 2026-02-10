@@ -37,7 +37,7 @@ public class Food : MonoBehaviour
         if (manager != null)
         {
             manager.AddFood(1);
-
+            CoinManager.Instance.Add(1);
             Collect();
         }
     }

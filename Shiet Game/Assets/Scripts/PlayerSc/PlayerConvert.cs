@@ -15,7 +15,8 @@ public class PlayerConvert : MonoBehaviour
     private int currentPlayer;
     private float lastX;
 
-    [SerializeField] ParticleSystem transformFX;
+    [SerializeField] ParticleSystem transformFX; //bu iki efekti food ve obtacle içinde
+                                                 //yazabilirim daha doğru okunaklı olur böylede problem dğeil
 
     [SerializeField] ParticleSystem obtacleEffect;
 
@@ -24,7 +25,7 @@ public class PlayerConvert : MonoBehaviour
     [SerializeField] float popScale = 0.7f;
     [SerializeField] float popTime = 0.12f;
 
-    public int totalFood { get; private set; }
+
 
     private void Start()
     {
@@ -37,7 +38,8 @@ public class PlayerConvert : MonoBehaviour
     public void AddFood(int amount)
     {
         foodCounter += amount;
-        totalFood++;
+       
+        
         PlayPop();
         if (foodCounter >= foodPerStage)
         {
@@ -50,7 +52,8 @@ public class PlayerConvert : MonoBehaviour
     public void SubFood(int amount)
     {
         foodCounter -= amount;
-        totalFood--;
+        
+        
         obtacleEffect.Play();
         if (foodCounter <= -foodPerStage)
         {
@@ -65,9 +68,6 @@ public class PlayerConvert : MonoBehaviour
         targetPlayer = Mathf.Clamp(targetPlayer, 0, players.Length -1);
         if (targetPlayer == currentPlayer) return;
 
-
-        
-
         lastX = players[currentPlayer].transform.localPosition.x;
         currentPlayer = targetPlayer;
 
@@ -75,8 +75,6 @@ public class PlayerConvert : MonoBehaviour
             players[i].SetActive(i == currentPlayer);
         transformFX.Play();
 
-        //Transform activePlaver = players[currentPlayer].transform;
-        //activePlaver.localPosition = new Vector3(lastX, activePlaver.localPosition.y, activePlaver.localPosition.z);
     }
 
     public void PlayPop()
@@ -87,8 +85,5 @@ public class PlayerConvert : MonoBehaviour
                 popTarget.transform.DOScale(baseScale, popTime).SetEase(Ease.InSine);
             });
     }
-    public void Consume(int amount)
-    {
-        totalFood = Mathf.Max(0, totalFood - amount);
-    }
+    
 }
