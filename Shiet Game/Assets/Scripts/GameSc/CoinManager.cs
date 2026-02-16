@@ -1,24 +1,44 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager Instance;
-
-    [SerializeField] private int currency;
-    public int Currency => currency;
+    
+    public int Coin;
+   
+    
+    [SerializeField] private Text coinText;
 
     private void Awake()
     {
+        
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-    }
 
+    }
+    private void Update()
+    {
+        
+    }
     public void Add(int amount)
     {
-        currency += amount;
+        Coin += amount;
+        coinText.text = Coin.ToString();
+
     }
     public void Remove(int amount)
     {
-        currency -= amount;
+        if(Coin > 0)
+        Coin -= amount;
+        coinText.text = Coin.ToString();
+
+    }
+    public void ApplyLanding(int multiplier)
+    {
+        Coin *= multiplier;
+        Debug.Log("Final Score: " + Coin);
+
+        
     }
 }

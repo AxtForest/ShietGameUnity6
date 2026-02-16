@@ -27,8 +27,8 @@ public class SimpleRunnerMovement : MonoBehaviour
     private float currentRotate;
     private Quaternion baseRot;
 
-    private Animator animator;
-
+    public Animator anim { get; private set; }
+    public Rigidbody rb { get; private set; }
 
     [SerializeField] SplineFollower splineFollower;
 
@@ -37,12 +37,14 @@ public class SimpleRunnerMovement : MonoBehaviour
     void Start()
     {
         baseRot = transform.rotation;
-        //animator = GetComponent<Animator>();
+      
 
-        animator = GetComponentInChildren<Animator>();
-        //targetX = transform.position.x;
+        anim = GetComponentInChildren<Animator>();
 
-        animator.CrossFade("Idle", 0f, 0);
+        rb = GetComponent<Rigidbody>();
+        
+
+        anim.CrossFade("Idle", 0f, 0);
 
     }
 
@@ -72,10 +74,10 @@ public class SimpleRunnerMovement : MonoBehaviour
         float oldX = pos.x;
         float newX = Mathf.Lerp(oldX, targetX, Time.deltaTime * horizontalSmooth);
 
-        //CurrentX = newX;
+       
 
         pos.x = newX;
-        //pos.z += forwardSpeed * Time.deltaTime;
+      
         transform.position = pos;
 
         float xDifference = newX - oldX;
@@ -91,7 +93,7 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         if (!started)
         {
-            animator.CrossFade("Run", 0f, 0);
+            anim.CrossFade("Run", 0f, 0);
 
             started = true;
             splineFollower.follow = true;
@@ -123,4 +125,14 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         targetX = 0f;
     }
+    public void StartJumpSection()
+    {
+        splineFollower.follow = false;
+        rb.useGravity = true;
+        rb.linearVelocity = Vector3.zero;
+    }
+    //public void LandingAnim()
+    //{
+    //    anim.CrossFade("Landing", 0f, 0);
+    //}
 }
