@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class MultiplierZone : MonoBehaviour
 {
-    public int multiplier = 1;
+    public int multiplier = 0;
     [SerializeField] private JumpPad poopSpawner;
+    [SerializeField] private PlayerConvert playerConvertSC;
     //[SerializeField] private SimpleRunnerMovement Movement;
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,8 +15,10 @@ public class MultiplierZone : MonoBehaviour
         poopSpawner.StopSpawning();
 
         //Movement.LandingAnim(); //donuşunce inactive diyor veri kaybı söz konusu
-
+                                  
         anim.CrossFade("Landing", 0f, 0);
         //+effect 
+        playerConvertSC.PlayLandEffect();
+
     }
 }
