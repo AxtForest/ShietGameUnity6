@@ -9,10 +9,11 @@ public class JumpPad : MonoBehaviour
     [SerializeField] private float minForce = 0.5f;
 
     [SerializeField] private PlayerConvert playerConvert;
-
+    [SerializeField] private SimpleRunnerMovement Movement;
 
     [SerializeField] private GameObject poopPrefab;
     [SerializeField] private Transform spawnPoint;
+
 
     private Coroutine spawnRoutine;
     private bool isSpawning;
@@ -23,13 +24,10 @@ public class JumpPad : MonoBehaviour
     {
       
         var player = other.GetComponent<SimpleRunnerMovement>();
-        var anim = other.GetComponentInChildren<Animator>();
-
+        
         player.StartJumpSection();
         
         int foodCount = CoinManager.Instance.Coin;
-
-        
 
         float extraForce = Remap(foodCount, 0f, 30f, minForce, maxForce);
 
@@ -38,19 +36,15 @@ public class JumpPad : MonoBehaviour
         
         Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized;
         player.rb.AddForce(jumpDir * (jumpForce + extraForce), ForceMode.Impulse);
-        
-        //player.anim.CrossFade("Jump", 0f, 0); donuşmeden kaynaklı
-        //veri kaybı sebebiyle çalışmıyo
 
-        anim.CrossFade("Jump", 0f, 0);
-
+        player.JumpAnim();
 
         StartSpawning();
 
     }
      public void StartSpawning()
     {
-        isSpawning = true;
+         isSpawning = true;
          spawnRoutine = StartCoroutine(SpawnLoop());
     }
 

@@ -48,6 +48,7 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     }
 
+   
     void OnEnable()
     {
         //Ekrana dokunulunca bu fonksiyonu çalıştırmaya yetkilisin demekmiş
@@ -131,8 +132,17 @@ public class SimpleRunnerMovement : MonoBehaviour
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
     }
-    //public void LandingAnim()
-    //{
-    //    anim.CrossFade("Landing", 0f, 0);
-    //}
+    public void GetActiveAnimator()
+    {
+        anim = GetComponentInChildren<Animator>();
+
+    }
+    public void LandingAnim()
+    {
+        anim.CrossFade("Landing", 0f, 0);
+    }
+    public void JumpAnim()
+    {
+        anim.CrossFade("Jump", 0f, 0);
+    }
 }

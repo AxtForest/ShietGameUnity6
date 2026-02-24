@@ -6,6 +6,8 @@ public class LandingManager : MonoBehaviour
     public int multiplier = 0;
     [SerializeField] private JumpPad poopSpawner;
     [SerializeField] private PlayerConvert playerConvertSC;
+    [SerializeField] private SimpleRunnerMovement Movement;
+
 
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject successPanel;
@@ -14,13 +16,13 @@ public class LandingManager : MonoBehaviour
     {
         
 
-        var anim = collision.gameObject.GetComponentInChildren<Animator>();
+       
 
         poopSpawner.StopSpawning();
 
-        //Movement.LandingAnim(); //donuşunce inactive diyor veri kaybı söz konusu
+        Movement.LandingAnim(); 
 
-        anim.CrossFade("Landing", 0f, 0);
+        
         playerConvertSC.PlayLandEffect();
 
 

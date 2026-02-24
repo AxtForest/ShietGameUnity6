@@ -8,7 +8,7 @@ public class Food : MonoBehaviour
     private Vector3 startScale;
     private Vector3 startPos;
 
-
+    [SerializeField] private PlayerConvert Manager;
 
     void Start()
     {
@@ -32,13 +32,10 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerConvert manager = FindObjectOfType<PlayerConvert>();
-
-        if (manager != null)
-        {
-            manager.AddFood(1);
+        
+            Manager.AddFood(1);
             CoinManager.Instance.Add(1);
             Collect();
-        }
+        
     }
 }

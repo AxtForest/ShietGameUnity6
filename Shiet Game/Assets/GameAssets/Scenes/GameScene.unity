@@ -128,49 +128,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
     - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].time
-      value: 0.5094091
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].value
-      value: 0.5307003
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outWeight
-      value: 0.05725931
-      objectReference: {fileID: 0}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic
@@ -396,6 +356,7 @@ MonoBehaviour:
   multiplier: 0
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1 &42384282
@@ -703,6 +664,7 @@ MonoBehaviour:
   multiplier: 1
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1 &52704966
@@ -951,6 +913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573726197325250811, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 9134821966003682085, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
       propertyPath: m_Name
       value: F_Europe_Pizza_Pepperoni (3)
@@ -1453,6 +1419,7 @@ MonoBehaviour:
   multiplier: 2
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1001 &271448387
@@ -1463,6 +1430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (2)
@@ -1559,6 +1530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (5)
@@ -1621,6 +1596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 3043833251452085885, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6530213844883207631, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
@@ -2090,7 +2069,7 @@ MonoBehaviour:
   players:
   - {fileID: 1374292092}
   - {fileID: 66937023}
-  foodPerStage: 5
+  foodPerStage: 2
   transformFX: {fileID: 788808281}
   obtacleEffect: {fileID: 2094716196}
   LandEffect: {fileID: 1215850793}
@@ -2120,6 +2099,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884227314}
     m_Modifications:
+    - target: {fileID: 1313025615962007290, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3740652380937166069, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
       propertyPath: m_Name
       value: spin blade
@@ -2187,6 +2170,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (3)
@@ -2241,6 +2228,171 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5145835385836869333, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
   m_PrefabInstance: {fileID: 610399297}
   m_PrefabAsset: {fileID: 0}
+--- !u!43 &649868336
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom Mesh
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 75}
+      m_Extent: {x: 2.5, y: 0.1, z: 75}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 0000020003000000030001000800040005000800050009000a00060007000a0007000b000c000d000e000c000e000f00100011001200100012001300140015001600140016001700
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 56
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 64
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 72
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 80
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 2112
+    _typelessdata: 00002040cdccccbd0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f00000000000016437ee4303f88bfb13e00000000000000000000000000000000000020c0cdccccbd0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00001643fc247f3f88bfb13e0000000000000000000000000000000000002040cdcccc3d0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f00000000000016437ee4303f4020273f00000000000000000000000000000000000020c0cdcccc3d0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00001643fc247f3f4020273f0000000000000000000000000000000000002040cdcccc3d00000000000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000000094949e3e83bfb13e00000000000000000000000000000000000020c0cdcccc3d00000000000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000803f000000003ce6843b83bfb13e0000000000000000000000000000000000002040cdccccbd000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000083bfb13e4020273f00000000000000000000000000000000000020c0cdccccbd000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000000004020273f4020273f0000000000000000000000000000000000002040cdcccc3d00001643000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000164394949e3e4020273f00000000000000000000000000000000000020c0cdcccc3d00001643000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000803f000016433ce6843b4020273f0000000000000000000000000000000000002040cdcccc3d000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000083bfb13e83bfb13e00000000000000000000000000000000000020c0cdcccc3d000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000000004020273f83bfb13e0000000000000000000000000000000000002040cdccccbd0000000000000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f000000000000000083bfb13e3ce6843b0000000000000000000000000000000000002040cdccccbd0000164300000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f000000000000164383bfb13e94949e3e00000000000000000000000000000000000020c0cdccccbd0000164300000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f0000803f000016434020273f94949e3e00000000000000000000000000000000000020c0cdccccbd0000000000000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f0000803f000000004020273f3ce6843b00000000000000000000000000000000000020c0cdccccbd00001643000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000000000001643b8b5303f94949e3e00000000000000000000000000000000000020c0cdcccc3d00001643000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f000000000000164334f67e3f94949e3e00000000000000000000000000000000000020c0cdcccc3d00000000000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f0000000034f67e3f3ce6843b00000000000000000000000000000000000020c0cdccccbd00000000000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00000000b8b5303f3ce6843b0000000000000000000000000000000000002040cdccccbd000000000000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000094949e3e3ce6843b0000000000000000000000000000000000002040cdcccc3d000000000000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f00000000000000003ce6843b3ce6843b0000000000000000000000000000000000002040cdcccc3d000016430000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000016433ce6843b94949e3e0000000000000000000000000000000000002040cdccccbd000016430000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f0000803f0000164394949e3e94949e3e00000000000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 75}
+    m_Extent: {x: 2.5, y: 0.1, z: 75}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &671034548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (2)
@@ -2797,171 +2953,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d795e26a8428dd34fb1c84c44a994e9c, type: 3}
---- !u!43 &764105924
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Custom Mesh
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 75}
-      m_Extent: {x: 2.5, y: 0.1, z: 75}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 0000020003000000030001000800040005000800050009000a00060007000a0007000b000c000d000e000c000e000f00100011001200100012001300140015001600140016001700
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 56
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 64
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 72
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 80
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 2112
-    _typelessdata: 00002040cdccccbd0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f00000000000016437ee4303f88bfb13e00000000000000000000000000000000000020c0cdccccbd0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00001643fc247f3f88bfb13e0000000000000000000000000000000000002040cdcccc3d0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f00000000000016437ee4303f4020273f00000000000000000000000000000000000020c0cdcccc3d0000164300000000000000000000803f00000000000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00001643fc247f3f4020273f0000000000000000000000000000000000002040cdcccc3d00000000000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000000094949e3e83bfb13e00000000000000000000000000000000000020c0cdcccc3d00000000000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000803f000000003ce6843b83bfb13e0000000000000000000000000000000000002040cdccccbd000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000083bfb13e4020273f00000000000000000000000000000000000020c0cdccccbd000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000000004020273f4020273f0000000000000000000000000000000000002040cdcccc3d00001643000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000164394949e3e4020273f00000000000000000000000000000000000020c0cdcccc3d00001643000000000000803f00000000000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000803f000016433ce6843b4020273f0000000000000000000000000000000000002040cdcccc3d000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000083bfb13e83bfb13e00000000000000000000000000000000000020c0cdcccc3d000000000000000000000000000080bf000000000000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000000004020273f83bfb13e0000000000000000000000000000000000002040cdccccbd0000000000000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f000000000000000083bfb13e3ce6843b0000000000000000000000000000000000002040cdccccbd0000164300000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f000000000000164383bfb13e94949e3e00000000000000000000000000000000000020c0cdccccbd0000164300000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f0000803f000016434020273f94949e3e00000000000000000000000000000000000020c0cdccccbd0000000000000000000080bf00000000000080bf0000000000000000000080bf0000803f0000803f0000803f0000803f0000803f000000004020273f3ce6843b00000000000000000000000000000000000020c0cdccccbd00001643000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000000000001643b8b5303f94949e3e00000000000000000000000000000000000020c0cdcccc3d00001643000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f000000000000164334f67e3f94949e3e00000000000000000000000000000000000020c0cdcccc3d00000000000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f0000000034f67e3f3ce6843b00000000000000000000000000000000000020c0cdccccbd00000000000080bf000000000000000000000080000080bf000000000000803f0000803f0000803f0000803f0000803f0000803f00000000b8b5303f3ce6843b0000000000000000000000000000000000002040cdccccbd000000000000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f000000000000000094949e3e3ce6843b0000000000000000000000000000000000002040cdcccc3d000000000000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f00000000000000003ce6843b3ce6843b0000000000000000000000000000000000002040cdcccc3d000016430000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f0000803f000016433ce6843b94949e3e0000000000000000000000000000000000002040cdccccbd000016430000803f0000000000000000000000800000803f000000000000803f0000803f0000803f0000803f0000803f0000803f0000164394949e3e94949e3e00000000000000000000000000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 75}
-    m_Extent: {x: 2.5, y: 0.1, z: 75}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &788808279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3128,6 +3119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 3043833251452085885, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6530213844883207631, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
@@ -3230,6 +3225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573726197325250811, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 9134821966003682085, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
       propertyPath: m_Name
       value: F_Europe_Pizza_Pepperoni (4)
@@ -3252,6 +3251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884227314}
     m_Modifications:
+    - target: {fileID: 1282622079330647083, guid: e2103ca562efa49adb23f7a935416c2b, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 1513421455015555096, guid: e2103ca562efa49adb23f7a935416c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54
@@ -3314,6 +3317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884227314}
     m_Modifications:
+    - target: {fileID: 1282622079330647083, guid: e2103ca562efa49adb23f7a935416c2b, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 1513421455015555096, guid: e2103ca562efa49adb23f7a935416c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54
@@ -3376,6 +3383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (4)
@@ -3438,6 +3449,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 3043833251452085885, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6530213844883207631, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.01
@@ -3755,6 +3770,7 @@ MonoBehaviour:
   multiplier: 5
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1 &869060126
@@ -4808,7 +4824,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954205428}
-  m_Mesh: {fileID: 764105924}
+  m_Mesh: {fileID: 649868336}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573726197325250811, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 9134821966003682085, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
       propertyPath: m_Name
       value: F_Europe_Pizza_Pepperoni
@@ -5350,49 +5370,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
     - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].time
-      value: 0.5094091
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].value
-      value: 0.5307003
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outWeight
-      value: 0.05725931
-      objectReference: {fileID: 0}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (3)
@@ -6026,6 +6006,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573726197325250811, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 9134821966003682085, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
       propertyPath: m_Name
       value: F_Europe_Pizza_Pepperoni (1)
@@ -6454,6 +6438,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 3043833251452085885, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6530213844883207631, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
@@ -6556,6 +6544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573726197325250811, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 9134821966003682085, guid: 62ed7ab4a04e8ea4d8591655bb97ba92, type: 3}
       propertyPath: m_Name
       value: F_Europe_Pizza_Pepperoni (2)
@@ -6722,6 +6714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blade spinner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7114456228752820325, guid: 287e68d7726d5499f9f7b90ec3635837, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7023,6 +7019,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (5)
@@ -7406,6 +7406,7 @@ MonoBehaviour:
   maxForce: 9.9
   minForce: 0.1
   playerConvert: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   poopPrefab: {fileID: 5471782206342428228, guid: 9ac45b96a9948374f99dcf6ee9202ce5, type: 3}
   spawnPoint: {fileID: 1354646976}
 --- !u!1001 &1678797226
@@ -7416,6 +7417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (1)
@@ -7573,6 +7578,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (6)
@@ -7731,6 +7740,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884227314}
     m_Modifications:
+    - target: {fileID: 1313025615962007290, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3740652380937166069, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
       propertyPath: m_Name
       value: spin blade (2)
@@ -7946,6 +7959,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger (4)
@@ -8008,6 +8025,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 3043833251452085885, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6530213844883207631, guid: 8226da19ba392cf4aa7072c6293d46e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.01
@@ -8076,49 +8097,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
     - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].time
-      value: 0.5094091
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].value
-      value: 0.5307003
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outSlope
-      value: -3.805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[2].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
-      propertyPath: Curve.m_Curve.Array.data[1].outWeight
-      value: 0.05725931
-      objectReference: {fileID: 0}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (6)
@@ -8606,6 +8587,7 @@ MonoBehaviour:
   multiplier: 3
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1 &1967171176
@@ -8711,6 +8693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884227314}
     m_Modifications:
+    - target: {fileID: 1313025615962007290, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3740652380937166069, guid: 8b57bc9c835784a5c9d30686ddb7c80c, type: 3}
       propertyPath: m_Name
       value: spin blade (1)
@@ -9006,6 +8992,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 1174947712600618427, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 3989590395101082093, guid: 25e6dc3aaee311841a201d9f064d73e1, type: 3}
       propertyPath: m_Name
       value: F_Europe_Burger_Hamburger
@@ -9253,6 +9243,7 @@ MonoBehaviour:
   multiplier: 4
   poopSpawner: {fileID: 1658350364}
   playerConvertSC: {fileID: 558801026}
+  Movement: {fileID: 5866666020977640466}
   gameOverPanel: {fileID: 873230815}
   successPanel: {fileID: 1798962982}
 --- !u!1001 &2119753295
@@ -9263,6 +9254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 930460385}
     m_Modifications:
+    - target: {fileID: 851679871115698761, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     - target: {fileID: 6855365875839038856, guid: 8632f83d59fee6541828e157f55537b6, type: 3}
       propertyPath: m_Name
       value: F_Europe_Hotdog_Hotdog_Classic (1)
@@ -9369,6 +9364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blade spinner
       objectReference: {fileID: 0}
+    - target: {fileID: 7114456228752820325, guid: 287e68d7726d5499f9f7b90ec3635837, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 558801026}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
