@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/GameAssets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -489,17 +489,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/GameAssets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b0990000
-    m_LastClickedID: 39344
-    m_ExpandedIDs: 00000000fe98000000990000029900000499000006990000089900000a9900000c9900000e99000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e99000030990000329900003499000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: bcaf0000
+    m_LastClickedID: 44988
+    m_ExpandedIDs: 00000000fe98000000990000029900000499000006990000089900000a9900000c9900000e99000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e990000309900003299000034990000b0990000baaf00000a5d0100945d0100a6ab010072be010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,7 +574,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 04f7ffffd8f8fffff8faffffee930000
+      m_ExpandedIDs: c495feffa89bfeff7ea1feffbea7feff7caefeffc2b4fefff6bbfeff30c2feff1ac8fefff0cdfeff2ed4feffbed4feff48e6feffe6e8feff1003ffff5a74ffff467bffffb486ffffc8cafffff8faffffc2910000e69100003a920000ca3a0100043b0100863c01001c3d010084af020036b002008eb0020040b10200e85603001e6f03001a74030014790300147e03001083030076a6030072ab03006eb0030068b50300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1140,9 +1140,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.9945126, y: 7.9320474, z: 7.261519}
+    m_Target: {x: -2.274083, y: 0.56396025, z: 11.661312}
     speed: 2
-    m_Value: {x: 4.9945126, y: 7.9320474, z: 7.261519}
+    m_Value: {x: -2.274083, y: 0.56396025, z: 11.661312}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1188,13 +1188,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.2504613, y: 0.5471656, z: -0.17562282, w: -0.7793789}
+    m_Target: {x: -0.19723453, y: 0.59934795, z: -0.1554912, w: -0.76034087}
     speed: 2
-    m_Value: {x: -0.25041175, y: 0.54705733, z: -0.17558807, w: -0.7792247}
+    m_Value: {x: -0.1969602, y: 0.6003632, z: -0.15575457, w: -0.7592834}
   m_Size:
-    m_Target: 1.5319074
+    m_Target: 6.426081
     speed: 2
-    m_Value: 1.5319074
+    m_Value: 6.4260697
   m_Ortho:
     m_Target: 0
     speed: 2

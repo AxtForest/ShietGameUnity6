@@ -120,7 +120,7 @@ public class SimpleRunnerMovement : MonoBehaviour
     public void StopHorizontalControl()
     {
         dragging = false;
-       
+        enabled = false;  //unitynin update ve start gibi fonksiyonları çalışmıyor direkt kapatıyo bu kod
     }
     public void AlignToCenter()
     {

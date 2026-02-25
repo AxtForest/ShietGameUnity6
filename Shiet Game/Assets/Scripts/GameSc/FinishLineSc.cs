@@ -19,7 +19,7 @@ public class FinishLineSc : MonoBehaviour
 
         SimpleRunnerMovement movement = other.GetComponent<SimpleRunnerMovement>();
 
-
+            
             movement.StopHorizontalControl();
             movement.AlignToCenter();
             movement.GetActiveAnimator();
