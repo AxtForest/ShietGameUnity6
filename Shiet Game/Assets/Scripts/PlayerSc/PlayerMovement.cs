@@ -68,25 +68,28 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     void Update()
     {
+        
+
+        //Spline follower ile çakıştığı için locale çektik
+
         if (!started) return;
 
-        Vector3 pos = transform.position;
+        
+        float currentX = transform.localPosition.x;
 
-        float oldX = pos.x;
-        float newX = Mathf.Lerp(oldX, targetX, Time.deltaTime * horizontalSmooth);
+        float newX = Mathf.Lerp(currentX, targetX, Time.deltaTime * horizontalSmooth);
 
-       
+        transform.localPosition = new Vector3(newX, 0f, 0f);
 
-        pos.x = newX;
-      
-        transform.position = pos;
-
-        float xDifference = newX - oldX;
+        
+        float xDifference = newX - currentX;
         float targetRotate = Mathf.Clamp(xDifference * rotationPower, -maxRotateAngle, maxRotateAngle);
         if (!dragging) targetRotate = 0f;
 
         currentRotate = Mathf.Lerp(currentRotate, targetRotate, Time.deltaTime * rotateSmooth);
-        transform.rotation = baseRot * Quaternion.Euler(0f, currentRotate, 0f);
+        transform.localRotation = Quaternion.Euler(0f, currentRotate, 0f);
+
+
     }
 
 
