@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour
 {
-    public static int CurrentLevel
+    public static int CurrentLevel //my first property :)
     {
         get => PlayerPrefs.GetInt("Level", 1);
         set => PlayerPrefs.SetInt("Level", value);

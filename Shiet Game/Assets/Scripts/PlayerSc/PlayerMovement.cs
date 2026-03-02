@@ -70,7 +70,7 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         
 
-        //Spline follower ile çakıştığı için locale çektik
+        //Spline follower ile çakıştığı için locale çektik tek yaptığım şey localposition yazmak
 
         if (!started) return;
 
@@ -127,7 +127,10 @@ public class SimpleRunnerMovement : MonoBehaviour
     }
     public void AlignToCenter()
     {
-        targetX = 0f;
+        
+        transform.localPosition = new Vector3(0f, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+
     }
     public void StartJumpSection()
     {
