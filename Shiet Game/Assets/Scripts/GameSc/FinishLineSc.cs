@@ -23,6 +23,8 @@ public class FinishLineSc : MonoBehaviour
             movement.StopHorizontalControl();
             movement.AlignToCenter();
             movement.GetActiveAnimator();
+
+        movement.gameObject.transform.Rotate(0f, 0f, 0f);
         
     }
 }

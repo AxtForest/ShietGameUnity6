@@ -1,0 +1,5 @@
+C:/Users/ayber/Downloads/ShietGameUnity6-main/ShietGameUnity6-main/Shiet Game/.utmp/RelWithDebInfo/4u36455c/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/ayber/Downloads/ShietGameUnity6-main/ShietGameUnity6-main/Shiet Game/.utmp/RelWithDebInfo/4u36455c/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/ayber/Downloads/ShietGameUnity6-main/ShietGameUnity6-main/Shiet Game/.utmp/RelWithDebInfo/4u36455c/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/ayber/Downloads/ShietGameUnity6-main/ShietGameUnity6-main/Shiet Game/.utmp/RelWithDebInfo/4u36455c/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/ayber/Downloads/ShietGameUnity6-main/ShietGameUnity6-main/Shiet Game/.utmp/RelWithDebInfo/4u36455c/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

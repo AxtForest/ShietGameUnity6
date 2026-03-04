@@ -34,14 +34,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SimulatorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 720
+    x: 869
     y: 0
-    width: 551
+    width: 402
     height: 628
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
@@ -93,7 +93,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1271
     y: 0
-    width: 302
+    width: 254
     height: 933
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
@@ -144,12 +144,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1573
+    x: 1525
     y: 0
-    width: 347
+    width: 395
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -297,7 +297,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 720
+    width: 869
     height: 628
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
@@ -366,7 +366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 79
-    width: 719
+    width: 868
     height: 602
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -383,6 +383,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -7648619216754766688, guid: 9fb325edc07d76743b39656123b06fc6, type: 2}
     - {fileID: -7648619216754766688, guid: 3850d40becce4984a939031e3ea3ffde, type: 2}
+    - {fileID: -8545176585198585182, guid: 3a3fe0d702545448c9eadca0ea359997, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.5329897
       e01: 0
@@ -416,10 +417,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.72105265
+      e01: 0
+      e02: 0
+      e03: -21.052643
+      e10: 0
+      e11: 0.72105265
+      e12: 0
+      e13: 220.21053
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 3850d40becce4984a939031e3ea3ffde, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 3a3fe0d702545448c9eadca0ea359997, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -7648619216754766688, guid: 3850d40becce4984a939031e3ea3ffde, type: 2}
+  - m_Target: {fileID: -8545176585198585182, guid: 3a3fe0d702545448c9eadca0ea359997, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -479,7 +496,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/GameAssets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -489,17 +506,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/GameAssets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2990000
-    m_LastClickedID: 39378
-    m_ExpandedIDs: 0000000006990000089900000a9900000c9900000e99000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e99000030990000329900003499000036990000389900003a9900003c9900003e9900004099000042990000449900004699000000ca9a3b
+    scrollPos: {x: 0, y: 109}
+    m_SelectedIDs: 56990000
+    m_LastClickedID: 39254
+    m_ExpandedIDs: 0000000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e99000030990000329900003499000036990000389900003a9900003c9900003e99000040990000429900004499000046990000489900004a9900004c9900004e99000050990000529900005499000056990000d299000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,7 +545,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006990000089900000a9900000c9900000e99000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e99000030990000329900003499000036990000389900003a9900003c9900003e99000040990000429900004499000046990000
+    m_ExpandedIDs: 0000000010990000129900001499000016990000189900001a9900001c9900001e99000020990000229900002499000026990000289900002a9900002c9900002e99000030990000329900003499000036990000389900003a9900003c9900003e99000040990000429900004499000046990000489900004a9900004c9900004e99000050990000529900005499000056990000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -557,7 +574,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000c0490200dc96000000000000
+    m_ExpandedInstanceIDs: c6230000c0490200dc9600000000000088aa0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -607,9 +624,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1573
+    x: 1525
     y: 79
-    width: 346
+    width: 394
     height: 907
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -658,7 +675,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1271
     y: 79
-    width: 300
+    width: 252
     height: 907
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -676,7 +693,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f8faffff
+      m_ExpandedIDs: 88d6ffff04deffffe4e5ffffc4edfffff8faffffd69100007a920000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -724,7 +741,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 79
-    width: 719
+    width: 868
     height: 602
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1140,9 +1157,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 18.12869, y: 10.5505085, z: -9.837123}
+    m_Target: {x: 42.207317, y: 70.659035, z: -336.92}
     speed: 2
-    m_Value: {x: 18.12869, y: 10.5505085, z: -9.837123}
+    m_Value: {x: 42.207317, y: 70.659035, z: -336.92}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1188,20 +1205,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20049039, y: 0.54556745, z: -0.1363027, w: -0.8025124}
+    m_Target: {x: -0.11409877, y: 0.016343547, z: -0.0016462293, w: -0.99368894}
     speed: 2
-    m_Value: {x: -0.2004458, y: 0.5454461, z: -0.13627239, w: -0.80233395}
+    m_Value: {x: -0.11257068, y: 0.014849952, z: -0.0014522541, w: -0.9935317}
   m_Size:
-    m_Target: 1.5335609
+    m_Target: 10
     speed: 2
-    m_Value: 1.5335609
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 2
-    m_SpeedNormalized: 1
+    m_Speed: 1.1004506
+    m_SpeedNormalized: 0.5500003
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -1272,22 +1289,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Simulator
+    m_Image: {fileID: 8720083202187608617, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
-    m_TextWithWhitespace: "Game\u200B"
+    m_TextWithWhitespace: "Simulator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 720
+    x: 869
     y: 79
-    width: 549
+    width: 400
     height: 602
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1301,69 +1318,34 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_SerializedViewNames:
-  - UnityEditor.DeviceSimulation.SimulatorWindow
+  - UnityEditor.GameView
   m_SerializedViewValues:
-  - C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet Game\Library\PlayModeViewStates\0bb207c4111ef2545aea8ac6187736bf
-  m_PlayModeViewName: GameView
+  - C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet Game\Library\PlayModeViewStates\7f7522c406646024184b6f56e4bbda47
+  m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
   m_TargetSize: {x: 1125, y: 2436}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 2
   m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 08000000000000000000000011000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -562.5
-    m_HBaseRangeMax: 562.5
-    m_VBaseRangeMin: -1218
-    m_VBaseRangeMax: 1218
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 549
-      height: 581
-    m_Scale: {x: 0.23850575, y: 0.23850575}
-    m_Translation: {x: 274.5, y: 290.5}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -1150.9156
-      y: -1218
-      width: 2301.8313
-      height: 2436
-    m_MinimalGUI: 1
-  m_defaultScale: 0.23850575
-  m_LastWindowPixelSize: {x: 549, y: 602}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000001000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
-  m_showToolbar: 1
+  m_SimulatorState:
+    controlPanelVisible: 0
+    controlPanelWidth: 0
+    controlPanelFoldoutKeys:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    controlPanelFoldoutValues: 00
+    pluginNames:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    pluginStates:
+    - '{}'
+    scale: 22
+    fitToScreenEnabled: 1
+    rotationDegree: 0
+    highlightSafeAreaEnabled: 0
+    friendlyName: Apple iPhone XS
+    screenIndex: 0
+    networkReachability: 1
+    systemLanguage: 10

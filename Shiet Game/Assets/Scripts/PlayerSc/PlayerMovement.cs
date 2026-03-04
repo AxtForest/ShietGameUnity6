@@ -105,7 +105,8 @@ public class SimpleRunnerMovement : MonoBehaviour
         }
 
         dragging = true;
-        targetX = transform.position.x;
+        targetX = transform.localPosition.x;
+        
     }
 
     void OnFingerUp(LeanFinger finger)
@@ -127,9 +128,15 @@ public class SimpleRunnerMovement : MonoBehaviour
     }
     public void AlignToCenter()
     {
-        
+
         transform.localPosition = new Vector3(0f, 0f, 0f);
-        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+
+
+        enabled = false;
+        currentRotate = 0f;
+        transform.rotation = Quaternion.identity;
+
+
 
     }
     public void StartJumpSection()
