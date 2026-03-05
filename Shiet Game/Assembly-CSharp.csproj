@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\GameSc\JumpPad.cs" />
     <Compile Include="Assets\Scripts\GameSc\LandingManager.cs" />
     <Compile Include="Assets\Scripts\GameSc\MultiplierZone.cs" />
+    <Compile Include="Assets\Scripts\PlayerSc\DanceAnim.cs" />
     <Compile Include="Assets\Scripts\GameSc\FinishLineSc.cs" />
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\MainControls.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />

@@ -13,6 +13,7 @@ public class FinishLineSc : MonoBehaviour
 
         finishParticle.Play();
 
+
         runCam.Priority = 0;
         finishCam.Priority = 10;
 
