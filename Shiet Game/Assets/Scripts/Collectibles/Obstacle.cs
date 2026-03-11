@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] private PlayerConvert Manager;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,9 @@ public class Obstacle : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other)
-    { 
-            Manager.SubFood(1);
-            CoinManager.Instance.Remove(1);
+    {
+        PlayerConvert.Instance.SubFood(1);
+        CoinManager.Instance.Remove(1);
             
     }
 }

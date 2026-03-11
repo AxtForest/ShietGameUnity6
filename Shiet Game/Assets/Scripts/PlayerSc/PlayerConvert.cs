@@ -6,7 +6,20 @@ using DG.Tweening;
 
 public class PlayerConvert : MonoBehaviour
 {
-    
+
+    public static PlayerConvert Instance { get; private set; }
+
+    private void Awake()
+    {
+        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
     [Header("Stages")]
     [SerializeField] private GameObject[] players;
     [SerializeField] private int foodPerStage = 2;

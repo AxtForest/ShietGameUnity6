@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 33
+  controlID: 26
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -148,8 +148,8 @@ MonoBehaviour:
     y: 0
     width: 400
     height: 933
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 34
+  controlID: 27
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -496,7 +496,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/GameAssets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -506,17 +506,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/GameAssets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f49c0000
-    m_LastClickedID: 40180
-    m_ExpandedIDs: 000000008a9b00008c9b00008e9b0000909b0000929b0000949b0000969b0000989b00009a9b00009c9b00009e9b0000a09b0000a29b0000a49b0000a69b0000a89b0000aa9b0000ac9b0000ae9b0000b09b0000b29b0000b49b0000b69b0000b89b0000ba9b0000bc9b0000be9b0000c09b0000c29b0000c49b0000c69b0000c89b0000ca9b0000cc9b0000ce9b0000d09b0000f49c000000ca9a3b
+    scrollPos: {x: 0, y: 109}
+    m_SelectedIDs: 90af0000
+    m_LastClickedID: 44944
+    m_ExpandedIDs: 000000004aaf00004caf00004eaf000050af000052af000054af000056af000058af00005aaf00005caf00005eaf000060af000062af000064af000066af000068af00006aaf00006caf00006eaf000070af000072af000074af000076af000078af00007aaf00007caf00007eaf000080af000082af000084af000086af000088af00008aaf00008caf00008eaf000090af0000bcb0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a9b00008c9b00008e9b0000909b0000929b0000949b0000969b0000989b00009a9b00009c9b00009e9b0000a09b0000a29b0000a49b0000a69b0000a89b0000aa9b0000ac9b0000ae9b0000b09b0000b29b0000b49b0000b69b0000b89b0000ba9b0000bc9b0000be9b0000c09b0000c29b0000c49b0000c69b0000c89b0000ca9b0000cc9b0000ce9b0000d09b0000
+    m_ExpandedIDs: 000000004aaf00004caf00004eaf000050af000052af000054af000056af000058af00005aaf00005caf00005eaf000060af000062af000064af000066af000068af00006aaf00006caf00006eaf000070af000072af000074af000076af000078af00007aaf00007caf00007eaf000080af000082af000084af000086af000088af00008aaf00008caf00008eaf000090af0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,7 +693,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 80f3fdffccf8fdffac00feffb6d9ffff3ee3ffffb0e9ffff92f1fffff8faffffe0b9000060ba00003ebb000040bb0000c4530300f653030078540300f655030042560300
+      m_ExpandedIDs: a281ffff84b3ffff6ab4ffff92c6ffffb4f1fffff8faffffcc9100004a92000030c90000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1157,9 +1157,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.9977746, y: 3.5819197, z: 139.01466}
+    m_Target: {x: -33.4422, y: -71.662025, z: 245.05707}
     speed: 2
-    m_Value: {x: 0.9977746, y: 3.5819197, z: 139.01466}
+    m_Value: {x: -33.4422, y: -71.662025, z: 245.05707}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1205,20 +1205,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1351361, y: 0.1438891, z: -0.018907895, w: -0.9805656}
+    m_Target: {x: -0.30877194, y: 0.20068473, z: -0.066975884, w: -0.9277632}
     speed: 2
-    m_Value: {x: -0.1350514, y: 0.14529933, z: -0.019102631, w: -0.979941}
+    m_Value: {x: -0.30864158, y: 0.2006, z: -0.06694761, w: -0.92737156}
   m_Size:
-    m_Target: 1.3810422
+    m_Target: 76.08941
     speed: 2
-    m_Value: 1.3810422
+    m_Value: 76.08941
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.1004506
-    m_SpeedNormalized: 0.5500003
+    m_Speed: 2
+    m_SpeedNormalized: 1
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -1320,12 +1320,12 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet Game\Library\PlayModeViewStates\7f7522c406646024184b6f56e4bbda47
+  - C:\Users\ayber\Downloads\ShietGameUnity6-main\ShietGameUnity6-main\Shiet Game\Library\PlayModeViewStates\58839a114cbc86947bcdb225971b5f49
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1125, y: 2436}
+  m_TargetSize: {x: 1170, y: 2532}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1341,11 +1341,11 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 22
+    scale: 21
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Apple iPhone XS
+    friendlyName: Apple iPhone 12
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10

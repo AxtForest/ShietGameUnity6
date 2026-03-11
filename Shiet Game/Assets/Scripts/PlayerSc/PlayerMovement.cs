@@ -158,4 +158,52 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         anim.CrossFade("Jump", 0f, 0);
     }
+    public void ResetPlayer()
+    {
+        // Animasyonu idle yap
+        anim.CrossFade("Idle", 0f, 0);
+
+        // Başlamadı olarak işaretle
+        started = false;
+
+        // Horizontal kontrol ve rotation sıfırla
+        dragging = false;
+        targetX = 0f;
+        currentRotate = 0f;
+
+        // --- EKLENEN/DÜZELTİLEN KISIMLAR ---
+
+        enabled = true;
+
+        // 2. Spline üzerinde karakteri en başa alıyoruz
+        if (splineFollower != null)
+        {
+            splineFollower.SetPercent(0f); // Spline'ın başına (%0) atar. (Alternatif: splineFollower.SetDistance(0f);)
+            splineFollower.follow = false; // Ekrana tekrar dokunulana kadar ilerlemesini durdurur
+        }
+
+        // 3. Eğer StartJumpSection çalıştıysa yerçekimi açılmıştır, onu da başa sarıyoruz
+        if (rb != null)
+        {
+            rb.useGravity = false; // Oyunun başında gravity kapalıysa false yap.
+            rb.linearVelocity = Vector3.zero; // Üzerinde kalan fiziksel bir hız varsa sıfırla
+        }
+
+        // Player pozisyonunu garanti olsun diye yine sıfırla (Spline ezecek olsa bile local'i sıfırlamak iyidir)
+        transform.position = Vector3.zero;
+        transform.localPosition = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+
+    }
+    public void AssignNewSpline(SplineComputer newSpline)
+    {
+        if (splineFollower != null && newSpline != null)
+        {
+            // Karakterin takip edeceği yeni yolu ata
+            splineFollower.spline = newSpline;
+
+            // Yolu atadıktan sonra garanti olsun diye karakteri yolun en başına al
+            splineFollower.SetPercent(0f);
+        }
+    }
 }

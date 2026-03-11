@@ -14,9 +14,7 @@ public class FinishLineSc : MonoBehaviour
         finishParticle.Play();
 
 
-        runCam.Priority = 0;
-        finishCam.Priority = 10;
-
+        CameraChanger();
 
         SimpleRunnerMovement movement = other.GetComponent<SimpleRunnerMovement>();
 
@@ -27,5 +25,16 @@ public class FinishLineSc : MonoBehaviour
 
         movement.gameObject.transform.Rotate(0f, 0f, 0f);
         
+    }
+
+    public void CameraChanger()
+    {
+        runCam.Priority = 0;
+        finishCam.Priority = 10;
+    }
+    public void SetDefaultCamera()
+    {
+        runCam.Priority = 10;
+        finishCam.Priority = 0;
     }
 }

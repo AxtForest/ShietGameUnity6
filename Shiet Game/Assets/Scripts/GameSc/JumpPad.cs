@@ -5,7 +5,7 @@ using System.Collections;
 public class JumpPad : MonoBehaviour
 {
     private float jumpForce = 10f;
-    [SerializeField] private float maxForce = 5f;
+    [SerializeField] private float maxForce = 10f;
     [SerializeField] private float minForce = 0.5f;
 
     [SerializeField] private PlayerConvert playerConvert;
@@ -29,7 +29,7 @@ public class JumpPad : MonoBehaviour
         
         int foodCount = CoinManager.Instance.Coin;
 
-        float extraForce = Remap(foodCount, 0f, 30f, minForce, maxForce);
+        float extraForce = Remap(foodCount, 0f, 30f, minForce, maxForce);//aktif sahnedeki sayı kadar olmalı (30f) jump force gerek yok min force o zaten
 
         Debug.Log("Extraforce =" + extraForce);//dengeleme testi
 
