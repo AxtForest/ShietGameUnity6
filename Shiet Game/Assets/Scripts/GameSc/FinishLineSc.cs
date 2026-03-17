@@ -27,7 +27,7 @@ public class FinishLineSc : MonoBehaviour
         
     }
 
-    public void CameraChanger()
+    public void CameraChanger() // tek cam finishten sonra tween ile baksın loadda reset
     {
         runCam.Priority = 0;
         finishCam.Priority = 10;
@@ -36,5 +36,6 @@ public class FinishLineSc : MonoBehaviour
     {
         runCam.Priority = 10;
         finishCam.Priority = 0;
+
     }
 }

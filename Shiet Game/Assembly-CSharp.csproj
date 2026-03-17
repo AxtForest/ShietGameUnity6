@@ -65,7 +65,7 @@
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\Close.cs" />
     <Compile Include="Assets\Scripts\GameSc\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\YeniSCLER\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\GameSc\MenuManager.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\PlayerConvert.cs" />
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\StoreScript.cs" />
     <Compile Include="Assets\Scripts\GameSc\JumpPad.cs" />
@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\GameSc\MultiplierZone.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\DanceAnim.cs" />
     <Compile Include="Assets\Scripts\GameSc\FinishLineSc.cs" />
+    <Compile Include="Assets\Scripts\GameSc\LevelManager.cs" />
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\MainControls.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />
   </ItemGroup>
