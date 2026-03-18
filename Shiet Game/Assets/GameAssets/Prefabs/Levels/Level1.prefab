@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7958602682297608621}
+  - component: {fileID: 6607400174154002936}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -35,6 +36,21 @@ Transform:
   - {fileID: 5345778544576052973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6607400174154002936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216773955996580691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4534a8eaad357ba4b9283d60df318d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelEnd: {fileID: 5345778544576052973}
+  levelSpline: {fileID: 1548307793329637469}
+  maxFood: 24
 --- !u!1 &2053257568387307486
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,14 +664,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 8.667706, y: 0.1, z: 192.4518}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0
   _clipToSample:
-    position: {x: 0, y: 0, z: 150}
+    position: {x: 8.667706, y: 0.1, z: 342.45178}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}

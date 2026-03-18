@@ -32,7 +32,7 @@ public class SimpleRunnerMovement : MonoBehaviour
 
     [SerializeField] SplineFollower splineFollower;
 
-    
+    [SerializeField] ParticleSystem LandEffect;
 
     void Start()
     {
@@ -70,7 +70,7 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         
 
-        //Spline follower ile çakıştığı için locale çektik tek yaptığım şey localposition yazmak
+        
 
         if (!started) return;
 
@@ -158,36 +158,9 @@ public class SimpleRunnerMovement : MonoBehaviour
     {
         anim.CrossFade("Jump", 0f, 0);
     }
-    // --- EKLENEN/DÜZELTİLEN KISIMLAR ---
-    public void ResetPlayer()
+    public void PlayLandEffect()
     {
-        // Animasyonu idle yap
-        anim.CrossFade("Idle", 0f, 0);
-
-        // Başlamadı olarak işaretle
-        started = false;
-
-        dragging = false;
-        targetX = 0f;
-        currentRotate = 0f;
-
-        enabled = true;
-
-        
-        
-        splineFollower.SetPercent(0f); // Splineın başına (0a) atma
-        splineFollower.follow = false; 
-        
-
-        rb.useGravity = false; 
-        rb.linearVelocity = Vector3.zero; //hız 0lama
-        
-
-        // locali sıfırlamayınca kamera bozuluyor
-       
-        transform.localPosition = Vector3.zero;
-        transform.rotation = Quaternion.identity;
-
+        LandEffect.Play();
     }
     public void AssignNewSpline(SplineComputer newSpline)
     {

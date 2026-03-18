@@ -32,7 +32,7 @@ public class PlayerConvert : MonoBehaviour
                                                  //yazabilirim daha doğru okunaklı olur böylede problem dğeil
 
     [SerializeField] ParticleSystem obtacleEffect;
-    [SerializeField] ParticleSystem LandEffect;
+    
 
     [SerializeField] GameObject popTarget;
     Vector3 baseScale;
@@ -100,9 +100,6 @@ public class PlayerConvert : MonoBehaviour
             });
     }
 
-    public void PlayLandEffect()
-    {
-        LandEffect.Play();
-    }
+   
     
 }

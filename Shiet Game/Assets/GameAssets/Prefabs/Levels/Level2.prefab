@@ -489,14 +489,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 11.14507, y: 2.0173755, z: 205.92455}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0.0007652119, y: -0.00014098299, z: 0.9999997}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0
   _clipToSample:
-    position: {x: 0, y: 0, z: 150}
+    position: {x: 11.14507, y: 2.0173755, z: 355.92456}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -848,6 +848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4852400559156810067}
+  - component: {fileID: 3700731463558623724}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -874,6 +875,21 @@ Transform:
   - {fileID: 1095065418337348796}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3700731463558623724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715687284218734520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4534a8eaad357ba4b9283d60df318d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelEnd: {fileID: 1095065418337348796}
+  levelSpline: {fileID: 5390420018804362295}
+  maxFood: 29
 --- !u!1 &8263043818781040456
 GameObject:
   m_ObjectHideFlags: 0

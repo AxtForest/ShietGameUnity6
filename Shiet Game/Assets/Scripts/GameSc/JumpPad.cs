@@ -4,16 +4,17 @@ using System.Collections;
 
 public class JumpPad : MonoBehaviour
 {
-    private float jumpForce = 10f;
-    [SerializeField] private float maxForce = 10f;
-    [SerializeField] private float minForce = 0.5f;
+    private float minForce = 1f;
+    private float maxForce = 20f; //ayarlanabilir böyle güzel ama leveldekinin yarısını alsan 3xe gitmediği durumlar oluyor 
+
 
     [SerializeField] private PlayerConvert playerConvert;
     [SerializeField] private SimpleRunnerMovement Movement;
-
+    
     [SerializeField] private GameObject poopPrefab;
     [SerializeField] private Transform spawnPoint;
 
+    
 
     private Coroutine spawnRoutine;
     private bool isSpawning;
@@ -22,24 +23,25 @@ public class JumpPad : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-      
+
         var player = other.GetComponent<SimpleRunnerMovement>();
-        
         player.StartJumpSection();
-        
+
         int foodCount = CoinManager.Instance.Coin;
+        int maxFoodCount = LevelManager.CurrentLevelData.maxFood;
 
-        float extraForce = Remap(foodCount, 0f, 30f, minForce, maxForce);//aktif sahnedeki sayı kadar olmalı (30f) jump force gerek yok min force o zaten
-
-        Debug.Log("Extraforce =" + extraForce);//dengeleme testi
+        float extraForce = Remap(foodCount, 0f, maxFoodCount, minForce, maxForce);
 
         
-        Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized;
-        player.rb.AddForce(jumpDir * (jumpForce + extraForce), ForceMode.Impulse);
+        Debug.Log(extraForce);
+        
+       Vector3 jumpDir = (other.transform.forward + Vector3.up).normalized;
+
+        player.rb.AddForce(jumpDir * extraForce  , ForceMode.Impulse);
+
 
         player.JumpAnim();
-
-        StartSpawning();
+        Invoke("StartSpawning",0.5f);
 
     }
      public void StartSpawning()

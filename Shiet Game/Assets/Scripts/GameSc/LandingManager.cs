@@ -5,49 +5,34 @@ public class LandingManager : MonoBehaviour
 
     public int multiplier = 0;
     [SerializeField] private JumpPad poopSpawner;
-    [SerializeField] private PlayerConvert playerConvertSC;
     [SerializeField] private SimpleRunnerMovement Movement;
+    [SerializeField] private UIManager UIManagerSc;
 
 
-    [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject successPanel;
 
     private void OnCollisionEnter(Collision collision)
     {
-        
 
-       
+        if (!collision.gameObject.CompareTag("Player"))
+            return;
 
         poopSpawner.StopSpawning();
-
         Movement.LandingAnim(); 
-
-        
-        playerConvertSC.PlayLandEffect();
+        Movement.PlayLandEffect(); 
 
 
         if(multiplier <= 0)
         {
 
-            Invoke("GameOver", 1.5f);
+            UIManagerSc.GetGameOver();
+
         }
         else
         {
-            CoinManager.Instance.ApplyLanding(multiplier);
-            Invoke("Success", 1.5f);
-            
-        }
-    }
 
-    private void GameOver()
-    {
-        gameOverPanel.SetActive(true);
-        successPanel.SetActive(false);
-    }
-    private void Success()
-    {
-        
-        successPanel.SetActive(true);
-        gameOverPanel.SetActive(false);
+            CoinManager.Instance.ApplyLanding(multiplier);
+            UIManagerSc.GetSuccess();
+
+        }
     }
     }
