@@ -6,7 +6,7 @@ public class FinishLineSc : MonoBehaviour
 
     [SerializeField] CinemachineCamera runCam;
     [SerializeField] CinemachineCamera finishCam;
-
+    [SerializeField] CameraManager camManager;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,8 +14,9 @@ public class FinishLineSc : MonoBehaviour
         finishParticle.Play();
 
 
-        CameraChanger();
-
+        camManager.MoveCameraOffset();
+       
+        
         SimpleRunnerMovement movement = other.GetComponent<SimpleRunnerMovement>();
 
             
@@ -27,15 +28,5 @@ public class FinishLineSc : MonoBehaviour
         
     }
 
-    public void CameraChanger() // tek cam finishten sonra tween ile baksın loadda reset
-    {
-        runCam.Priority = 0;
-        finishCam.Priority = 10;
-    }
-    public void SetDefaultCamera()
-    {
-        runCam.Priority = 10;
-        finishCam.Priority = 0;
-
-    }
+    
 }

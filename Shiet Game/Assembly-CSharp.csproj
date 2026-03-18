@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\GameSc\LevelDataSc.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\DanceAnim.cs" />
     <Compile Include="Assets\Scripts\GameSc\FinishLineSc.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\GameSc\LevelManager.cs" />
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\MainControls.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Food.cs" />

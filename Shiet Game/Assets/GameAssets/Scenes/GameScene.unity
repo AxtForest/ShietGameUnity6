@@ -3263,8 +3263,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.218453, y: 0.001382614, z: -0.00030951205, w: 0.97584647}
-  m_LocalPosition: {x: -0.01611999, y: 6.3072205, z: -2.621532}
+  m_LocalRotation: {x: 0.21847416, y: 0.0013800323, z: -0.00030896548, w: 0.9758417}
+  m_LocalPosition: {x: -0.016082816, y: 6.3072615, z: -2.6214952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3840,6 +3840,53 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4425129568604114668, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
   m_PrefabInstance: {fileID: 1215850791}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1243803379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243803380}
+  - component: {fileID: 1243803381}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243803380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243803379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243803381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243803379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbe9756ebd21254ea63ec4f4775c5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 1267887350}
+  finishOffset: {x: 2.6, y: 5.87, z: -9}
+  transitionDuration: 2
 --- !u!1 &1266465394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,13 +3993,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267887347}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.218453, y: 0.001382614, z: -0.00030951205, w: 0.97584647}
-  m_LocalPosition: {x: -0.016120173, y: 6.3071465, z: -2.6215968}
+  m_LocalRotation: {x: 0.21847416, y: 0.0013800323, z: -0.00030896548, w: 0.9758417}
+  m_LocalPosition: {x: -0.016010022, y: 6.307252, z: -2.6215038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.021, y: 0.167, z: 0.037}
+  m_LocalEulerAnglesHint: {x: 25.239, y: 0.19, z: 0}
 --- !u!114 &1267887350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5133,113 +5180,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.7169812, g: 0.3747856, b: 0, a: 0.6666667}
   m_EffectDistance: {x: 0, y: -11}
   m_UseGraphicAlpha: 1
---- !u!1 &1647521680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1647521683}
-  - component: {fileID: 1647521682}
-  - component: {fileID: 1647521681}
-  m_Layer: 0
-  m_Name: FinishCam
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1647521681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647521680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraDistance: 2
-  DeadZoneDepth: 0
-  Composition:
-    ScreenPosition: {x: -1.5, y: -0.5}
-    DeadZone:
-      Enabled: 0
-      Size: {x: 0.2, y: 0.2}
-    HardLimits:
-      Enabled: 0
-      Size: {x: 0.8, y: 0.8}
-      Offset: {x: 0, y: 0}
-  CenterOnActivate: 1
-  TargetOffset: {x: 2.6, y: 5.87, z: -9}
-  Damping: {x: 1, y: 1, z: 1}
-  Lookahead:
-    Enabled: 0
-    Time: 0
-    Smoothing: 0
-    IgnoreY: 0
---- !u!114 &1647521682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647521680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Priority:
-    Enabled: 1
-    m_Value: 1
-  OutputChannel: 1
-  StandbyUpdate: 2
-  m_StreamingVersion: 20241001
-  m_LegacyPriority: 0
-  Target:
-    TrackingTarget: {fileID: 543450652668845675}
-    LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
-  Lens:
-    FieldOfView: 55
-    OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
-    Dutch: 0
-    ModeOverride: 0
-    PhysicalProperties:
-      GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
-      LensShift: {x: 0, y: 0}
-      FocusDistance: 10
-      Iso: 200
-      ShutterSpeed: 0.005
-      Aperture: 16
-      BladeCount: 5
-      Curvature: {x: 2, y: 11}
-      BarrelClipping: 0.25
-      Anamorphism: 0
-  BlendHint: 0
---- !u!4 &1647521683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647521680}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.17256597, y: -0.10977545, z: 0.01935637, w: 0.97867036}
-  m_LocalPosition: {x: 4.480955, y: 5.6796947, z: -6.4625125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 20, y: -12.8, z: 0}
 --- !u!1 &1658350359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8956,7 +8896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishParticle: {fileID: 597881265}
   runCam: {fileID: 1267887350}
-  finishCam: {fileID: 1647521682}
+  finishCam: {fileID: 0}
+  camManager: {fileID: 1243803381}
 --- !u!137 &3484442680942495167
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -11978,10 +11919,10 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 963194228}
   - {fileID: 1267887349}
-  - {fileID: 1647521683}
   - {fileID: 1007888357}
   - {fileID: 558801027}
   - {fileID: 31427799}
   - {fileID: 671034552}
   - {fileID: 735161353}
   - {fileID: 1445544028}
+  - {fileID: 1243803380}

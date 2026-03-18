@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] SimpleRunnerMovement player;
     [SerializeField] private List<GameObject> levels;
-    [SerializeField] FinishLineSc cameraChanger;
+    
 
     [SerializeField] private GameObject finalRoad;
     private GameObject currentLevel;
@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
         finalRoad.transform.SetPositionAndRotation(levelData.levelEnd.position, levelData.levelEnd.rotation);
 
        
-        cameraChanger.SetDefaultCamera();
+        
     }
     
     public void NextLevel()
