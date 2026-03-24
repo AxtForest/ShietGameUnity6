@@ -6,7 +6,7 @@ public class LandingManager : MonoBehaviour
     public int multiplier = 0;
     [SerializeField] private JumpPad poopSpawner;
     [SerializeField] private SimpleRunnerMovement Movement;
-    [SerializeField] private UIManager UIManagerSc;
+    
 
 
 
@@ -24,14 +24,17 @@ public class LandingManager : MonoBehaviour
         if(multiplier <= 0)
         {
 
-            UIManagerSc.GetGameOver();
+            //UIManagerSc.GetGameOver();
+
+            UIManager.Instance.GetGameOver();
 
         }
         else
         {
 
             CoinManager.Instance.ApplyLanding(multiplier);
-            UIManagerSc.GetSuccess();
+            // UIManagerSc.GetSuccess();
+            UIManager.Instance.GetSuccess();
 
         }
     }

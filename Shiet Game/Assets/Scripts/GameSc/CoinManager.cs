@@ -9,7 +9,7 @@ public class CoinManager : MonoBehaviour
    
     
     [SerializeField] private Text coinText;
-
+    [SerializeField] private Text finalCoinText;
     private void Awake()
     {
         
@@ -39,6 +39,8 @@ public class CoinManager : MonoBehaviour
         Coin *= multiplier;
         Debug.Log("Final Score: " + Coin);
 
-        
+        finalCoinText.text = Coin.ToString();
     }
+
+
 }

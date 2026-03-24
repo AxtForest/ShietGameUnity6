@@ -98,7 +98,7 @@ public class SimpleRunnerMovement : MonoBehaviour
         if (!started)
         {
             anim.CrossFade("Run", 0f, 0);
-
+            UIManager.Instance.CloseUI();
             started = true;
             splineFollower.follow = true;
 
