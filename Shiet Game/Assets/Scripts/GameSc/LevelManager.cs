@@ -36,9 +36,7 @@ public class LevelManager : MonoBehaviour
 
         player.AssignNewSpline(levelData.levelSpline);
         finalRoad.transform.SetPositionAndRotation(levelData.levelEnd.position, levelData.levelEnd.rotation);
-
-       
-        
+   
     }
     
     public void NextLevel()

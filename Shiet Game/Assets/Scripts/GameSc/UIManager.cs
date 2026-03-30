@@ -56,10 +56,10 @@ public class UIManager : MonoBehaviour
 
     void AnimateCursor()
     {
-        // İlk pozisyonu -315 olarak ayarla
+        
         cursor.anchoredPosition = new Vector2(-315f, cursor.anchoredPosition.y);
 
-        // -315'ten 520'ye hareket etsin, oradan tekrar -315'e dönsün
+        // -315ten 520ye hareket ediyo oradan tekrar -315e dönüyo
         cursor.DOAnchorPosX(520f, 2f).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
     }
     public void CloseUI()
@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
             cursor.gameObject.SetActive(false); 
             arrowUI.SetActive(false);
 
-        Debug.Log("Swipe UI kapatıldı");
+        Debug.Log("UI gg");
     }
 
 }

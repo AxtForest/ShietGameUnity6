@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelEnd: {fileID: 1095065418337348796}
   levelSpline: {fileID: 5390420018804362295}
-  maxFood: 29
+  maxFood: 0
 --- !u!1 &8263043818781040456
 GameObject:
   m_ObjectHideFlags: 0
