@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -513,10 +513,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f8b00000
-    m_LastClickedID: 45304
-    m_ExpandedIDs: 0000000082af000084af000086af000088af00008aaf00008caf00008eaf000090af000092af000094af000096af000098af00009aaf00009caf00009eaf0000a0af0000a2af0000a4af0000a6af0000a8af0000aaaf0000acaf0000aeaf0000b0af0000b2af0000b4af0000b6af0000b8af0000baaf0000bcaf0000beaf0000c0af0000c2af0000c4af0000c6af0000c8af0000caaf0000f6b0000000ca9a3b
+    scrollPos: {x: 0, y: 61}
+    m_SelectedIDs: ecb00000
+    m_LastClickedID: 45292
+    m_ExpandedIDs: 0000000082af000084af000086af000088af00008aaf00008caf00008eaf000090af000092af000094af000096af000098af00009aaf00009caf00009eaf0000a0af0000a2af0000a4af0000a6af0000a8af0000aaaf0000acaf0000b0af0000b2af0000b6af0000b8af0000baaf0000bcaf0000beaf0000c0af0000c2af0000c4af0000c6af0000caaf0000eab0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,18 +693,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 34bcffff7cc0ffff82c0fffff8faffff349100004891000088910000d291000020920000c4920000309300004c930000
+      m_ExpandedIDs: ba35feffe83dfeff62eaffff0cf8fffff8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: RunCam
-        m_OriginalName: RunCam
+        m_Name: CameraManager
+        m_OriginalName: CameraManager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 37504
+        m_UserData: 37490
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1157,9 +1157,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 3.0726366, y: -3.1127193, z: 116.40804}
+    m_Target: {x: 0.640504, y: 4.376752, z: 17.760988}
     speed: 2
-    m_Value: {x: 3.0726366, y: -3.1127193, z: 116.40804}
+    m_Value: {x: 0.640504, y: 4.376752, z: 17.760988}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1205,9 +1205,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.06348597, y: -0.92106634, z: 0.34840548, w: -0.16477007}
+    m_Target: {x: -0.0029346985, y: -0.930914, z: 0.0040261624, w: -0.36651284}
     speed: 2
-    m_Value: {x: -0.06345649, y: -0.9206387, z: 0.3482437, w: -0.16469356}
+    m_Value: {x: -0.0029332945, y: -0.9304686, z: 0.0040242365, w: -0.3663375}
   m_Size:
     m_Target: 10
     speed: 2

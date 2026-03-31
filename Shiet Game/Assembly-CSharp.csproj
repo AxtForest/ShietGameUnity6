@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\GameSc\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerSc\PlayerConvert.cs" />
+    <Compile Include="Assets\Scripts\GameSc\LevelGenerator.cs" />
     <Compile Include="Assets\HyperCasualAssets\Cartoon UI\Script\StoreScript.cs" />
     <Compile Include="Assets\Scripts\GameSc\JumpPad.cs" />
     <Compile Include="Assets\Scripts\GameSc\LandingManager.cs" />
