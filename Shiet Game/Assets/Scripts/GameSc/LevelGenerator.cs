@@ -13,11 +13,13 @@ public class LevelGenerator : MonoBehaviour
 
     [Header("Food Settings")]
     public List<GameObject> foodPrefabs;
-    [Range(0, 1)] public float foodProbability = 0.8f;
+    //[Range(0, 1)] public float foodProbability = 0.8f;
+    public int foodCount = 30;
 
     [Header("Obstacle Settings")]
     public List<GameObject> obstaclePrefabs;
-    [Range(0, 1)] public float obstacleProbability = 0.2f;
+    //[Range(0, 1)] public float obstacleProbability = 0.2f;
+    public int obstacleCount = 15;
 
     [Header("Height Settings")]
     public float foodHeightOffset = 0f; 

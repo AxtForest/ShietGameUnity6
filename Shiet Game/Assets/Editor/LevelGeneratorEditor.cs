@@ -13,7 +13,41 @@ public class LevelGeneratorEditor : Editor
 
         LevelGenerator gen = (LevelGenerator)target;
 
-        GUILayout.Space(10);
+        GUILayout.Space(15);
+
+        // --- YENİ EKLENEN KISIM: BİLGİ VE UYARI EKRANI ---
+        if (gen.spline != null && gen.spacing > 0)
+        {
+            float length = gen.spline.CalculateLength();
+            float availableLength = (length - gen.endOffset) - gen.startOffset;
+
+            if (availableLength > 0)
+            {
+                // Mevcut kodundaki matematiğe göre toplam slot sayısı
+                int maxSlots = Mathf.FloorToInt(availableLength / gen.spacing) + 1;
+                int requestedItems = gen.foodCount + gen.obstacleCount;
+
+                // Bilgi Kutusu
+                EditorGUILayout.HelpBox($"Yol Uzunluğu: {length:F1} birim\nKullanılabilir Alan: {availableLength:F1} birim\nMaksimum Obje Kapasitesi (Slot): {maxSlots}", MessageType.Info);
+
+                // Eğer istenen obje sayısı kapasiteyi aşıyorsa Uyarı Kutusu çıkar
+                if (requestedItems > maxSlots)
+                {
+                    EditorGUILayout.HelpBox($"DİKKAT: İstenen obje sayısı ({requestedItems}), yoldaki maksimum kapasiteyi ({maxSlots}) aşıyor! {requestedItems - maxSlots} adet obje oluşturulamayacak.", MessageType.Warning);
+                }
+            }
+            else
+            {
+                EditorGUILayout.HelpBox("Kullanılabilir alan kalmadı! 'Start Offset' ve 'End Offset' değerlerini küçült veya yolu uzat.", MessageType.Error);
+            }
+        }
+        else
+        {
+            EditorGUILayout.HelpBox("Bir Spline ata ve Spacing değerinin 0'dan büyük olduğundan emin ol.", MessageType.Warning);
+        }
+        // --------------------------------------------------
+
+        GUILayout.Space(15);
 
         if (GUILayout.Button("GENERATE LEVEL", GUILayout.Height(35)))
         {
@@ -28,76 +62,94 @@ public class LevelGeneratorEditor : Editor
 
     void Clear(LevelGenerator gen)
     {
-        if (gen.generatedParent != null)
-        {
-            DestroyImmediate(gen.generatedParent.gameObject);
-        }
+        //Find'dan kurtul to do
+       
+
+        Transform oldFoods = gen.transform.Find("Foods");
+        if (oldFoods != null) Undo.DestroyObjectImmediate(oldFoods.gameObject);
+
+        Transform oldObstacles = gen.transform.Find("Obstacles");
+        if (oldObstacles != null) Undo.DestroyObjectImmediate(oldObstacles.gameObject);
     }
 
     void Generate(LevelGenerator gen)
     {
         if (gen.spline == null)
         {
-            Debug.LogError("Spline yok! laaaa");
+            Debug.LogError("Spline yok! kardeşşşş");
             return;
         }
 
-        // Yeni üretim yapmadan önce eskileri temizle
         Clear(gen);
 
         float length = gen.spline.CalculateLength();
-        float distance = gen.startOffset;
+        float startLimit = gen.startOffset;
         float endLimit = length - gen.endOffset;
+        float availableLength = endLimit - startLimit;
 
-       
+        if (availableLength <= 0) return; 
 
-        gen.generatedParent = new GameObject("GeneratedObjects").transform;
-        gen.generatedParent.SetParent(gen.transform);
+        int totalSlots = Mathf.FloorToInt(availableLength / gen.spacing);
 
-        // Belirlenen aralıkta objeleri oluşturmaya başla
-        while (distance < endLimit)
+        List<int> availableSlots = new List<int>();
+        for (int i = 0; i <= totalSlots; i++)
         {
-            SplineSample sample = gen.spline.Evaluate(distance / length);
-
-            // Sağa veya sola rastgele sapma miktarı
-            float randomHorizontalOffset = Random.Range(-gen.spawnWidth, gen.spawnWidth);
-
-            // Taban pozisyonunu hesapla
-            Vector3 basePos = sample.position + (sample.right * randomHorizontalOffset);
-
-            // Yükseklik offsetlerini ekle
-            Vector3 foodPos = basePos + (sample.up * gen.foodHeightOffset);
-            Vector3 obstaclePos = basePos + (sample.up * gen.obstacleHeightOffset);
-
-            // 1. Önce engel koymayı dene
-            bool spawnedObstacle = TrySpawn(gen.obstaclePrefabs, gen.obstacleProbability, obstaclePos, gen.generatedParent, sample);
-
-            // 2. Eğer engel oluşmadıysa (aynı kordinatta çakışmamaları için) yiyecek koymayı dene
-            if (!spawnedObstacle)
-            {
-                TrySpawn(gen.foodPrefabs, gen.foodProbability, foodPos, gen.generatedParent, sample);
-            }
-
-            distance += gen.spacing;
+            availableSlots.Add(i);
         }
+
+        Transform foodsParent = new GameObject("Foods").transform;
+        foodsParent.SetParent(gen.transform);
+        foodsParent.localPosition = Vector3.zero;
+        foodsParent.localRotation = Quaternion.identity;
+        Undo.RegisterCreatedObjectUndo(foodsParent.gameObject, "Generate Foods");
+
+        Transform obstaclesParent = new GameObject("Obstacles").transform;
+        obstaclesParent.SetParent(gen.transform);
+        obstaclesParent.localPosition = Vector3.zero;
+        obstaclesParent.localRotation = Quaternion.identity;
+        Undo.RegisterCreatedObjectUndo(obstaclesParent.gameObject, "Generate Obstacles");
+
+        List<int> obstacleSlots = PickRandomSlots(availableSlots, gen.obstacleCount);
+        SpawnItems(obstacleSlots, gen.obstaclePrefabs, obstaclesParent, gen, length, gen.obstacleHeightOffset);
+
+        List<int> foodSlots = PickRandomSlots(availableSlots, gen.foodCount);
+        SpawnItems(foodSlots, gen.foodPrefabs, foodsParent, gen, length, gen.foodHeightOffset);
     }
 
-    bool TrySpawn(List<GameObject> prefabs, float prob, Vector3 pos, Transform parent, SplineSample sample)
+    List<int> PickRandomSlots(List<int> availableSlots, int count)
     {
-        if (prefabs == null || prefabs.Count == 0) return false;
+        List<int> pickedSlots = new List<int>();
+        for (int i = 0; i < count && availableSlots.Count > 0; i++)
+        {
+            int randomIndex = Random.Range(0, availableSlots.Count);
+            pickedSlots.Add(availableSlots[randomIndex]);
+            availableSlots.RemoveAt(randomIndex);
+        }
+        return pickedSlots;
+    }
 
-        // Olasılık tutmazsa false dön
-        if (Random.value > prob) return false;
+    void SpawnItems(List<int> slots, List<GameObject> prefabs, Transform parent, LevelGenerator gen, float totalLength, float heightOffset)
+    {
+        if (prefabs == null || prefabs.Count == 0) return;
 
-        GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
-        GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+        foreach (int slot in slots)
+        {
+            float distance = gen.startOffset + (slot * gen.spacing);
 
-        go.transform.position = pos;
-        // Objenin yönünü ve yukarı eksenini yolun eğimine uydur
-        go.transform.rotation = Quaternion.LookRotation(sample.forward, sample.up);
-        go.transform.SetParent(parent);
+            SplineSample sample = gen.spline.Evaluate(distance / totalLength);
 
-        // Başarıyla oluşturulduysa true dön
-        return true;
+            float randomHorizontalOffset = Random.Range(-gen.spawnWidth, gen.spawnWidth);
+            Vector3 basePos = sample.position + (sample.right * randomHorizontalOffset);
+            Vector3 finalPos = basePos + (sample.up * heightOffset);
+
+            GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
+            GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+
+            go.transform.position = finalPos;
+            go.transform.rotation = Quaternion.LookRotation(sample.forward, sample.up);
+            go.transform.SetParent(parent);
+
+            Undo.RegisterCreatedObjectUndo(go, "Spawn Item");
+        }
     }
 }
